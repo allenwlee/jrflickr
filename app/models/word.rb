@@ -3,7 +3,9 @@
 class Word < ActiveRecord::Base
   attr_reader :anagrams
   # Remember to create a migration!
-
+  def self.anagrams(word)
+    word.reverse
+  end
  
   def is_anagram?(word1, word2)
     word1 = word1.downcase

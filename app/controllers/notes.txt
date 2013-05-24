@@ -1,0 +1,5 @@
+env
+echo $HOME
+echo $PATH
+URL -> resources
+HTTP -> protocol

@@ -3,12 +3,11 @@ get '/' do
   erb :index
 end
 
-get '/:word' do
+get '/word' do
   # p params[:word]
-  # @w = Word.where(text: params[:word])
+  @w = Word.anagrams(params[:word])
   # p @w
   # w.anagrams
-  @w = Word.anagrams(params[:word])
-  # @w = params[:word]
+    # @w = params[:word]
   erb :index
 end
